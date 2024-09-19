@@ -1,0 +1,70 @@
+.navbar {
+  height: 50px;
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 0 20px; /* Add padding for better alignment on mobile */
+  }
+
+  .navbar {
+    height: 60px; /* Slightly increase navbar height on mobile */
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 18px; /* Adjust logo size for mobile */
+  }
+
+  .navButton {
+    margin-left: 10px; /* Reduce margin between buttons */
+    padding: 8px 15px; /* Increase button padding for mobile touch */
+  }
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    flex-direction: column; /* Stack logo and buttons vertically on very small screens */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add gap between logo and buttons */
+  }
+
+  .navbar {
+    height: auto; /* Let the height adjust based on content */
+    padding: 10px; /* Add padding to the navbar */
+  }
+
+  .logo {
+    font-size: 16px; /* Further adjust logo size for smaller screens */
+  }
+
+  .navButton {
+    padding: 10px 20px; /* Increase button size for easy touch access */
+  }
+}

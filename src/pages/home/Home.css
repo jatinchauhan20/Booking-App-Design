@@ -1,0 +1,36 @@
+.homeContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.homeTitle {
+  width: 1024px;
+  font-size: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .homeTitle {
+    width: 90%; /* Reduce width to fit within the mobile screen */
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+
+  .homeContainer {
+    margin-top: 30px; /* Reduce top margin for mobile */
+    gap: 20px; /* Adjust gap for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .homeTitle {
+    font-size: 16px; /* Further reduce font size for smaller screens */
+  }
+
+  .homeContainer {
+    margin-top: 20px; /* Further reduce top margin for small screens */
+    gap: 15px; /* Further adjust gap for small screens */
+  }
+}

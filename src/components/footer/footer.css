@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  max-width: 1024px;
+  font-size: 12px;
+  margin: 0 auto; /* Center footer */
+}
+
+.fLists {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.fList {
+  list-style: none;
+  padding: 0;
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: #003580;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .fLists {
+    flex-direction: column; /* Stack lists vertically */
+    gap: 20px; /* Add spacing between lists */
+    align-items: center; /* Center lists */
+  }
+
+  .fListItem {
+    font-size: 14px; /* Increase font size for readability on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+
+  .fLists {
+    margin-bottom: 30px; /* Reduce bottom margin for smaller screens */
+  }
+
+  .fListItem {
+    font-size: 12px; /* Slightly larger font size for very small screens */
+    margin-bottom: 8px; /* Reduce margin between items */
+  }
+}

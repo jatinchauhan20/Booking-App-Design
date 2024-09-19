@@ -1,0 +1,151 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column; /* Stacks items vertically on small screens */
+}
+
+.listSearch {
+  background-color: #febb02;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  width: 100%; /* Full width on small screens */
+}
+
+.lsTitle {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.lsItem > label {
+  font-size: 12px;
+}
+
+.lsItem > input {
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+
+.lsItem > span {
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lsOptions {
+  padding: 10px;
+}
+
+.lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+.lsOptionInput {
+  width: 50px;
+}
+
+.listSearch > button {
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.listResult {
+  flex: 3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .listWrapper {
+    flex-direction: column; /* Stack items vertically on medium-sized screens */
+    gap: 10px;
+  }
+
+  .listSearch {
+    padding: 10px;
+    border-radius: 8px; /* Slightly smaller border radius on smaller screens */
+  }
+
+  .lsTitle {
+    font-size: 18px; /* Decrease font size for mobile screens */
+  }
+
+  .lsItem > label {
+    font-size: 10px; /* Decrease font size for mobile screens */
+  }
+
+  .lsItem > input {
+    height: 28px; /* Adjust input height for mobile screens */
+    font-size: 14px;
+  }
+
+  .lsItem > span {
+    height: 28px; /* Adjust span height for mobile screens */
+    font-size: 14px;
+  }
+
+  .lsOptionItem {
+    font-size: 10px; /* Decrease font size for mobile screens */
+  }
+
+  .listSearch > button {
+    padding: 8px; /* Reduce padding for mobile screens */
+    font-size: 14px; /* Adjust button font size for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .lsTitle {
+    font-size: 16px; /* Further decrease font size for very small screens */
+  }
+
+  .lsItem > label {
+    font-size: 8px; /* Further decrease font size for very small screens */
+  }
+
+  .lsItem > input {
+    height: 25px; /* Adjust input height for very small screens */
+  }
+
+  .lsItem > span {
+    height: 25px; /* Adjust span height for very small screens */
+  }
+
+  .lsOptionItem {
+    font-size: 8px; /* Further decrease font size for very small screens */
+  }
+
+  .listSearch > button {
+    padding: 6px; /* Reduce padding for very small screens */
+    font-size: 12px; /* Adjust button font size for very small screens */
+  }
+}

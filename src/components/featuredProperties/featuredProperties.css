@@ -1,0 +1,108 @@
+.fp {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fpItem {
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fpImg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.fpName {
+  color: #333;
+  font-weight: bold;
+}
+
+.fpCity {
+  font-weight: 300;
+}
+
+.fpPrice {
+  font-weight: 500;
+}
+
+.fpRating > button {
+  background-color: #003580;
+  color: white;
+  border: none;
+  padding: 3px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.fpRating > span {
+  font-size: 14px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .fp {
+    flex-direction: column; /* Stack the items vertically */
+    gap: 15px; /* Reduce the gap between items */
+  }
+
+  .fpImg {
+    height: 200px; /* Reduce image height for smaller screens */
+  }
+
+  .fpName {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .fpCity {
+    font-size: 14px; /* Slightly smaller font for city name */
+  }
+
+  .fpPrice {
+    font-size: 16px; /* Adjust font size for price */
+  }
+
+  .fpRating > span {
+    font-size: 12px; /* Slightly smaller rating text */
+  }
+
+  .fpRating > button {
+    padding: 5px; /* Increase padding for better button tap target */
+  }
+}
+
+@media (max-width: 480px) {
+  .fp {
+    gap: 10px; /* Reduce the gap further for very small screens */
+  }
+
+  .fpImg {
+    height: 180px; /* Further reduce image height */
+  }
+
+  .fpName {
+    font-size: 16px; /* Adjust font size for very small screens */
+  }
+
+  .fpCity {
+    font-size: 12px; /* Smaller font for city name */
+  }
+
+  .fpPrice {
+    font-size: 14px; /* Smaller font for price */
+  }
+
+  .fpRating > span {
+    font-size: 11px; /* Further reduce rating text size */
+  }
+
+  .fpRating > button {
+    padding: 4px; /* Smaller padding for very small screens */
+  }
+}

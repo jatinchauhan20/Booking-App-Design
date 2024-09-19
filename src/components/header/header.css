@@ -1,0 +1,210 @@
+.header {
+  background-color: #003580;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px 0px 100px 0px;
+}
+
+.headerContainer.listMode {
+  margin: 20px 0px 0px 0px;
+}
+
+.headerList {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.headerDesc {
+  margin: 20px 0px;
+}
+
+.headerBtn {
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.headerSearch {
+  height: 30px;
+  background-color: white;
+  border: 3px solid #febb02;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.headerIcon {
+  color: lightgray;
+}
+
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerSearchInput {
+  border: none;
+  outline: none;
+}
+
+.headerSearchText {
+  color: lightgray;
+  cursor: pointer;
+}
+
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .headerContainer {
+    margin: 20px 0px 50px 0px; /* Reduce bottom margin for smaller screens */
+  }
+
+  .headerList {
+    gap: 20px; /* Reduce gap between list items */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+  }
+
+  .headerSearch {
+    flex-direction: column; /* Stack search items vertically */
+    padding: 15px; /* Adjust padding */
+    position: static; /* Remove absolute positioning */
+    margin-top: 20px; /* Add margin to create space */
+  }
+
+  .headerSearchItem {
+    width: 100%; /* Ensure full-width input for mobile */
+  }
+
+  .headerSearchInput {
+    width: 100%; /* Make input full width */
+    padding: 10px; /* Add padding for better touch interaction */
+  }
+
+  .headerDesc {
+    margin: 15px 0; /* Adjust margin for a more compact layout */
+    text-align: center; /* Center the description text */
+  }
+
+  .headerBtn {
+    width: 100%; /* Full-width button for mobile */
+    padding: 15px; /* Increase padding for better touch */
+  }
+
+  .date, .options {
+    top: auto; /* Adjust positioning for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    margin: 10px 0px 30px 0px; /* Further reduce margins for small screens */
+  }
+
+  .headerList {
+    gap: 15px; /* Reduce gap further on small screens */
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .headerSearch {
+    padding: 10px; /* Reduce padding for smaller screens */
+    border-width: 2px; /* Slightly reduce border thickness */
+  }
+
+  .headerSearchItem {
+    flex-direction: column; /* Stack search items vertically */
+    width: 100%;
+  }
+
+  .headerBtn {
+    padding: 12px; /* Adjust padding for better fit */
+  }
+
+  .optionItem {
+    width: 100%; /* Make option items full-width on small screens */
+    margin: 5px; /* Reduce margin */
+  }
+
+  .optionCounter {
+    gap: 5px; /* Reduce gap in counter buttons */
+  }
+
+  .optionCounterButton {
+    width: 25px; /* Smaller buttons for mobile */
+    height: 25px;
+  }
+}
